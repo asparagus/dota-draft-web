@@ -1,0 +1,1125 @@
+/* glue: 0.13 hash: 30e04ed50e */
+.sprite-miniheroes-zuus_alt1,
+.sprite-miniheroes-zuus,
+.sprite-miniheroes-witch_doctor,
+.sprite-miniheroes-wisp,
+.sprite-miniheroes-winter_wyvern,
+.sprite-miniheroes-windrunner,
+.sprite-miniheroes-weaver,
+.sprite-miniheroes-warlock,
+.sprite-miniheroes-void_spirit,
+.sprite-miniheroes-visage,
+.sprite-miniheroes-viper,
+.sprite-miniheroes-venomancer,
+.sprite-miniheroes-vengefulspirit,
+.sprite-miniheroes-ursa,
+.sprite-miniheroes-undying,
+.sprite-miniheroes-tusk,
+.sprite-miniheroes-troll_warlord,
+.sprite-miniheroes-treant,
+.sprite-miniheroes-tiny,
+.sprite-miniheroes-tinker,
+.sprite-miniheroes-tidehunter,
+.sprite-miniheroes-terrorblade_alt1,
+.sprite-miniheroes-terrorblade,
+.sprite-miniheroes-templar_assassin,
+.sprite-miniheroes-techies_alt1,
+.sprite-miniheroes-techies,
+.sprite-miniheroes-sven,
+.sprite-miniheroes-storm_spirit,
+.sprite-miniheroes-spirit_breaker,
+.sprite-miniheroes-spirit_break,
+.sprite-miniheroes-spectre,
+.sprite-miniheroes-sniper,
+.sprite-miniheroes-snapfire,
+.sprite-miniheroes-slark,
+.sprite-miniheroes-slardar,
+.sprite-miniheroes-skywrath_mage,
+.sprite-miniheroes-skeleton_king,
+.sprite-miniheroes-silencer,
+.sprite-miniheroes-shredder,
+.sprite-miniheroes-shadow_shaman,
+.sprite-miniheroes-shadow_demon,
+.sprite-miniheroes-sandking,
+.sprite-miniheroes-sand_king,
+.sprite-miniheroes-rubick,
+.sprite-miniheroes-rikimaru,
+.sprite-miniheroes-riki,
+.sprite-miniheroes-razor,
+.sprite-miniheroes-rattletrap,
+.sprite-miniheroes-queenofpain,
+.sprite-miniheroes-pugna,
+.sprite-miniheroes-pudge,
+.sprite-miniheroes-puck,
+.sprite-miniheroes-phoenix,
+.sprite-miniheroes-phantom_lancer,
+.sprite-miniheroes-phantom_assassin_alt1,
+.sprite-miniheroes-phantom_assassin,
+.sprite-miniheroes-pangolier,
+.sprite-miniheroes-oracle,
+.sprite-miniheroes-omniknight,
+.sprite-miniheroes-ogre_magi,
+.sprite-miniheroes-obsidian_destroyer,
+.sprite-miniheroes-nyx_assassin,
+.sprite-miniheroes-night_stalker,
+.sprite-miniheroes-nevermore_alt1,
+.sprite-miniheroes-nevermore,
+.sprite-miniheroes-necrolyte,
+.sprite-miniheroes-naga_siren,
+.sprite-miniheroes-morphling,
+.sprite-miniheroes-monkey_king_alt1,
+.sprite-miniheroes-monkey_king,
+.sprite-miniheroes-mirana,
+.sprite-miniheroes-meepo,
+.sprite-miniheroes-medusa,
+.sprite-miniheroes-mars,
+.sprite-miniheroes-magnataur,
+.sprite-miniheroes-lycan,
+.sprite-miniheroes-luna,
+.sprite-miniheroes-lone_druid,
+.sprite-miniheroes-lion,
+.sprite-miniheroes-lina_alt1,
+.sprite-miniheroes-lina,
+.sprite-miniheroes-life_stealer,
+.sprite-miniheroes-lich,
+.sprite-miniheroes-leshrac,
+.sprite-miniheroes-legion_commander_alt1,
+.sprite-miniheroes-legion_commander,
+.sprite-miniheroes-lanaya,
+.sprite-miniheroes-kunkka,
+.sprite-miniheroes-keeper_of_the_light,
+.sprite-miniheroes-juggernaut_alt,
+.sprite-miniheroes-juggernaut,
+.sprite-miniheroes-jakiro,
+.sprite-miniheroes-invoker,
+.sprite-miniheroes-huskar,
+.sprite-miniheroes-gyrocopter,
+.sprite-miniheroes-grimstroke,
+.sprite-miniheroes-furion,
+.sprite-miniheroes-faceless_void,
+.sprite-miniheroes-enigma,
+.sprite-miniheroes-enchantress,
+.sprite-miniheroes-ember_spirit,
+.sprite-miniheroes-elder_titan,
+.sprite-miniheroes-earthshaker,
+.sprite-miniheroes-earth_spirit,
+.sprite-miniheroes-drow_ranger,
+.sprite-miniheroes-drow,
+.sprite-miniheroes-dragon_knight,
+.sprite-miniheroes-doom_bringer,
+.sprite-miniheroes-doom,
+.sprite-miniheroes-disruptor,
+.sprite-miniheroes-death_prophet,
+.sprite-miniheroes-dazzle,
+.sprite-miniheroes-dark_willow,
+.sprite-miniheroes-dark_seer,
+.sprite-miniheroes-crystal_maiden_alt1,
+.sprite-miniheroes-crystal_maiden,
+.sprite-miniheroes-clinkz,
+.sprite-miniheroes-chen,
+.sprite-miniheroes-chaos_knight,
+.sprite-miniheroes-centaur,
+.sprite-miniheroes-broodmother,
+.sprite-miniheroes-bristleback,
+.sprite-miniheroes-brewmaster,
+.sprite-miniheroes-bounty_hunter,
+.sprite-miniheroes-bm_storm,
+.sprite-miniheroes-bm_fire,
+.sprite-miniheroes-bm_earth,
+.sprite-miniheroes-bloodseeker,
+.sprite-miniheroes-beastmaster,
+.sprite-miniheroes-batrider,
+.sprite-miniheroes-bane,
+.sprite-miniheroes-axe,
+.sprite-miniheroes-arcwarden,
+.sprite-miniheroes-arc_warden,
+.sprite-miniheroes-antimage,
+.sprite-miniheroes-ancient_apparition,
+.sprite-miniheroes-alchemist,
+.sprite-miniheroes-abyssal_underlord,
+.sprite-miniheroes-abaddon {
+    background-image: url('miniheroes.png');
+    background-repeat: no-repeat;
+}
+        
+.sprite-miniheroes-zuus_alt1 {
+    background-position: 0 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-zuus {
+    background-position: -32px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-witch_doctor {
+    background-position: 0 -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-wisp {
+    background-position: -32px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-winter_wyvern {
+    background-position: -64px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-windrunner {
+    background-position: -64px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-weaver {
+    background-position: 0 -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-warlock {
+    background-position: -32px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-void_spirit {
+    background-position: -64px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-visage {
+    background-position: -96px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-viper {
+    background-position: -96px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-venomancer {
+    background-position: -96px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-vengefulspirit {
+    background-position: 0 -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-ursa {
+    background-position: -32px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-undying {
+    background-position: -64px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-tusk {
+    background-position: -96px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-troll_warlord {
+    background-position: -128px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-treant {
+    background-position: -128px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-tiny {
+    background-position: -128px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-tinker {
+    background-position: -128px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-tidehunter {
+    background-position: 0 -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-terrorblade_alt1 {
+    background-position: -32px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-terrorblade {
+    background-position: -64px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-templar_assassin {
+    background-position: -96px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-techies_alt1 {
+    background-position: -128px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-techies {
+    background-position: -160px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-sven {
+    background-position: -160px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-storm_spirit {
+    background-position: -160px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-spirit_breaker {
+    background-position: -160px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-spirit_break {
+    background-position: -160px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-spectre {
+    background-position: 0 -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-sniper {
+    background-position: -32px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-snapfire {
+    background-position: -64px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-slark {
+    background-position: -96px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-slardar {
+    background-position: -128px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-skywrath_mage {
+    background-position: -160px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-skeleton_king {
+    background-position: -192px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-silencer {
+    background-position: -192px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-shredder {
+    background-position: -192px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-shadow_shaman {
+    background-position: -192px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-shadow_demon {
+    background-position: -192px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-sandking {
+    background-position: -192px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-sand_king {
+    background-position: 0 -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-rubick {
+    background-position: -32px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-rikimaru {
+    background-position: -64px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-riki {
+    background-position: -96px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-razor {
+    background-position: -128px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-rattletrap {
+    background-position: -160px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-queenofpain {
+    background-position: -192px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-pugna {
+    background-position: -224px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-pudge {
+    background-position: -224px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-puck {
+    background-position: -224px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-phoenix {
+    background-position: -224px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-phantom_lancer {
+    background-position: -224px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-phantom_assassin_alt1 {
+    background-position: -224px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-phantom_assassin {
+    background-position: -224px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-pangolier {
+    background-position: 0 -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-oracle {
+    background-position: -32px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-omniknight {
+    background-position: -64px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-ogre_magi {
+    background-position: -96px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-obsidian_destroyer {
+    background-position: -128px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-nyx_assassin {
+    background-position: -160px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-night_stalker {
+    background-position: -192px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-nevermore_alt1 {
+    background-position: -224px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-nevermore {
+    background-position: -256px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-necrolyte {
+    background-position: -256px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-naga_siren {
+    background-position: -256px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-morphling {
+    background-position: -256px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-monkey_king_alt1 {
+    background-position: -256px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-monkey_king {
+    background-position: -256px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-mirana {
+    background-position: -256px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-meepo {
+    background-position: -256px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-medusa {
+    background-position: 0 -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-mars {
+    background-position: -32px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-magnataur {
+    background-position: -64px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lycan {
+    background-position: -96px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-luna {
+    background-position: -128px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lone_druid {
+    background-position: -160px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lion {
+    background-position: -192px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lina_alt1 {
+    background-position: -224px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lina {
+    background-position: -256px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-life_stealer {
+    background-position: -288px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lich {
+    background-position: -288px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-leshrac {
+    background-position: -288px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-legion_commander_alt1 {
+    background-position: -288px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-legion_commander {
+    background-position: -288px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-lanaya {
+    background-position: -288px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-kunkka {
+    background-position: -288px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-keeper_of_the_light {
+    background-position: -288px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-juggernaut_alt {
+    background-position: -288px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-juggernaut {
+    background-position: 0 -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-jakiro {
+    background-position: -32px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-invoker {
+    background-position: -64px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-huskar {
+    background-position: -96px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-gyrocopter {
+    background-position: -128px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-grimstroke {
+    background-position: -160px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-furion {
+    background-position: -192px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-faceless_void {
+    background-position: -224px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-enigma {
+    background-position: -256px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-enchantress {
+    background-position: -288px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-ember_spirit {
+    background-position: -320px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-elder_titan {
+    background-position: -320px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-earthshaker {
+    background-position: -320px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-earth_spirit {
+    background-position: -320px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-drow_ranger {
+    background-position: -320px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-drow {
+    background-position: -320px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-dragon_knight {
+    background-position: -320px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-doom_bringer {
+    background-position: -320px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-doom {
+    background-position: -320px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-disruptor {
+    background-position: -320px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-death_prophet {
+    background-position: 0 -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-dazzle {
+    background-position: -32px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-dark_willow {
+    background-position: -64px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-dark_seer {
+    background-position: -96px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-crystal_maiden_alt1 {
+    background-position: -128px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-crystal_maiden {
+    background-position: -160px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-clinkz {
+    background-position: -192px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-chen {
+    background-position: -224px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-chaos_knight {
+    background-position: -256px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-centaur {
+    background-position: -288px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-broodmother {
+    background-position: -320px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bristleback {
+    background-position: -352px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-brewmaster {
+    background-position: -352px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bounty_hunter {
+    background-position: -352px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bm_storm {
+    background-position: -352px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bm_fire {
+    background-position: -352px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bm_earth {
+    background-position: -352px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bloodseeker {
+    background-position: -352px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-beastmaster {
+    background-position: -352px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-batrider {
+    background-position: -352px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-bane {
+    background-position: -352px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-axe {
+    background-position: -352px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-arcwarden {
+    background-position: 0 -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-arc_warden {
+    background-position: -32px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-antimage {
+    background-position: -64px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-ancient_apparition {
+    background-position: -96px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-alchemist {
+    background-position: -128px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-abyssal_underlord {
+    background-position: -160px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.sprite-miniheroes-abaddon {
+    background-position: -192px -352px;
+    width: 32px;
+    height: 32px;
+}
+        
+@media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+    .sprite-miniheroes-zuus_alt1,
+    .sprite-miniheroes-zuus,
+    .sprite-miniheroes-witch_doctor,
+    .sprite-miniheroes-wisp,
+    .sprite-miniheroes-winter_wyvern,
+    .sprite-miniheroes-windrunner,
+    .sprite-miniheroes-weaver,
+    .sprite-miniheroes-warlock,
+    .sprite-miniheroes-void_spirit,
+    .sprite-miniheroes-visage,
+    .sprite-miniheroes-viper,
+    .sprite-miniheroes-venomancer,
+    .sprite-miniheroes-vengefulspirit,
+    .sprite-miniheroes-ursa,
+    .sprite-miniheroes-undying,
+    .sprite-miniheroes-tusk,
+    .sprite-miniheroes-troll_warlord,
+    .sprite-miniheroes-treant,
+    .sprite-miniheroes-tiny,
+    .sprite-miniheroes-tinker,
+    .sprite-miniheroes-tidehunter,
+    .sprite-miniheroes-terrorblade_alt1,
+    .sprite-miniheroes-terrorblade,
+    .sprite-miniheroes-templar_assassin,
+    .sprite-miniheroes-techies_alt1,
+    .sprite-miniheroes-techies,
+    .sprite-miniheroes-sven,
+    .sprite-miniheroes-storm_spirit,
+    .sprite-miniheroes-spirit_breaker,
+    .sprite-miniheroes-spirit_break,
+    .sprite-miniheroes-spectre,
+    .sprite-miniheroes-sniper,
+    .sprite-miniheroes-snapfire,
+    .sprite-miniheroes-slark,
+    .sprite-miniheroes-slardar,
+    .sprite-miniheroes-skywrath_mage,
+    .sprite-miniheroes-skeleton_king,
+    .sprite-miniheroes-silencer,
+    .sprite-miniheroes-shredder,
+    .sprite-miniheroes-shadow_shaman,
+    .sprite-miniheroes-shadow_demon,
+    .sprite-miniheroes-sandking,
+    .sprite-miniheroes-sand_king,
+    .sprite-miniheroes-rubick,
+    .sprite-miniheroes-rikimaru,
+    .sprite-miniheroes-riki,
+    .sprite-miniheroes-razor,
+    .sprite-miniheroes-rattletrap,
+    .sprite-miniheroes-queenofpain,
+    .sprite-miniheroes-pugna,
+    .sprite-miniheroes-pudge,
+    .sprite-miniheroes-puck,
+    .sprite-miniheroes-phoenix,
+    .sprite-miniheroes-phantom_lancer,
+    .sprite-miniheroes-phantom_assassin_alt1,
+    .sprite-miniheroes-phantom_assassin,
+    .sprite-miniheroes-pangolier,
+    .sprite-miniheroes-oracle,
+    .sprite-miniheroes-omniknight,
+    .sprite-miniheroes-ogre_magi,
+    .sprite-miniheroes-obsidian_destroyer,
+    .sprite-miniheroes-nyx_assassin,
+    .sprite-miniheroes-night_stalker,
+    .sprite-miniheroes-nevermore_alt1,
+    .sprite-miniheroes-nevermore,
+    .sprite-miniheroes-necrolyte,
+    .sprite-miniheroes-naga_siren,
+    .sprite-miniheroes-morphling,
+    .sprite-miniheroes-monkey_king_alt1,
+    .sprite-miniheroes-monkey_king,
+    .sprite-miniheroes-mirana,
+    .sprite-miniheroes-meepo,
+    .sprite-miniheroes-medusa,
+    .sprite-miniheroes-mars,
+    .sprite-miniheroes-magnataur,
+    .sprite-miniheroes-lycan,
+    .sprite-miniheroes-luna,
+    .sprite-miniheroes-lone_druid,
+    .sprite-miniheroes-lion,
+    .sprite-miniheroes-lina_alt1,
+    .sprite-miniheroes-lina,
+    .sprite-miniheroes-life_stealer,
+    .sprite-miniheroes-lich,
+    .sprite-miniheroes-leshrac,
+    .sprite-miniheroes-legion_commander_alt1,
+    .sprite-miniheroes-legion_commander,
+    .sprite-miniheroes-lanaya,
+    .sprite-miniheroes-kunkka,
+    .sprite-miniheroes-keeper_of_the_light,
+    .sprite-miniheroes-juggernaut_alt,
+    .sprite-miniheroes-juggernaut,
+    .sprite-miniheroes-jakiro,
+    .sprite-miniheroes-invoker,
+    .sprite-miniheroes-huskar,
+    .sprite-miniheroes-gyrocopter,
+    .sprite-miniheroes-grimstroke,
+    .sprite-miniheroes-furion,
+    .sprite-miniheroes-faceless_void,
+    .sprite-miniheroes-enigma,
+    .sprite-miniheroes-enchantress,
+    .sprite-miniheroes-ember_spirit,
+    .sprite-miniheroes-elder_titan,
+    .sprite-miniheroes-earthshaker,
+    .sprite-miniheroes-earth_spirit,
+    .sprite-miniheroes-drow_ranger,
+    .sprite-miniheroes-drow,
+    .sprite-miniheroes-dragon_knight,
+    .sprite-miniheroes-doom_bringer,
+    .sprite-miniheroes-doom,
+    .sprite-miniheroes-disruptor,
+    .sprite-miniheroes-death_prophet,
+    .sprite-miniheroes-dazzle,
+    .sprite-miniheroes-dark_willow,
+    .sprite-miniheroes-dark_seer,
+    .sprite-miniheroes-crystal_maiden_alt1,
+    .sprite-miniheroes-crystal_maiden,
+    .sprite-miniheroes-clinkz,
+    .sprite-miniheroes-chen,
+    .sprite-miniheroes-chaos_knight,
+    .sprite-miniheroes-centaur,
+    .sprite-miniheroes-broodmother,
+    .sprite-miniheroes-bristleback,
+    .sprite-miniheroes-brewmaster,
+    .sprite-miniheroes-bounty_hunter,
+    .sprite-miniheroes-bm_storm,
+    .sprite-miniheroes-bm_fire,
+    .sprite-miniheroes-bm_earth,
+    .sprite-miniheroes-bloodseeker,
+    .sprite-miniheroes-beastmaster,
+    .sprite-miniheroes-batrider,
+    .sprite-miniheroes-bane,
+    .sprite-miniheroes-axe,
+    .sprite-miniheroes-arcwarden,
+    .sprite-miniheroes-arc_warden,
+    .sprite-miniheroes-antimage,
+    .sprite-miniheroes-ancient_apparition,
+    .sprite-miniheroes-alchemist,
+    .sprite-miniheroes-abyssal_underlord,
+    .sprite-miniheroes-abaddon {
+                background-image: url('miniheroes.png');
+                -webkit-background-size: 384px 384px;
+                -moz-background-size: 384px 384px;
+                background-size: 384px 384px;
+            }
+        }
+        
