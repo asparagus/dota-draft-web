@@ -10,7 +10,7 @@
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
-<body>  
+<body>
 <svg class="defs-only">
   <filter id="ban-filter" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
     <feColorMatrix type="matrix" 
@@ -28,83 +28,49 @@
   </filter>
 </svg>
 <div class="container">
-  <div class="header">
-    <h3 class="text-muted text-center">
-      <img src="{{ url_for('static', filename='images/dota2.png') }}" alt="Dota 2 Logo" height="34" width="34"/>
-      Dota draft
-    </h3>
-  </div>
-  <div class="row">
-    <div class="col-sm-4 col-xs-6">
-      <div class="relative">
-        <input id="query-hint" class="form-control col-sm-4" type="text" tabindex="-1" autocomplete="off" readonly=""/>
-        <input id="query" class="form-control" type="text" placeholder="All Heroes"/>
-      </div>
-    </div>
+  <div id="selector">
+    <input id="query-hint" class="form-control col-sm-4" type="text" tabindex="-1" autocomplete="off" readonly=""/>
+    <input id="query" class="form-control" type="text" placeholder="All Heroes"/>
+
+    <button id="radiant-pick">Radiant</button>
+    <button id="dire-pick">Dire</button>
+    <button id="ban">Ban</button>
   </div>
   
   <div id="heroes" class="row">
-    <div id="str-heroes" class="col-sm-4 col-xs-6">
-      <h3><img src="{{ url_for('static', filename='images/Icon_Str.png') }}"/> Strength</h3>
-    </div>
-    <div id="agi-heroes" class="col-sm-4 col-xs-6">
-      <h3><img src="{{ url_for('static', filename='images/Icon_Agi.png') }}"/> Agility</h3>
-    </div>
-    <div id="int-heroes" class="col-sm-4 col-xs-6">
-      <h3><img src="{{ url_for('static', filename='images/Icon_Int.png') }}"/> Intelligence</h3>
-    </div>
   </div>
-  
+
   <hr/>
   <div id="draft" class="row">
-    <div class="col-sm-12 col-md-8">
-      <div id="bans" class="row">
-        <div class="col-sm-6 text-center">
-          <h2 class="text-muted">Your Team's Bans</h2>
-          <div>
-            <div class="draft droppable ban" team="ally"></div>
-            <div class="draft droppable ban" team="ally"></div>
-            <div class="draft droppable ban" team="ally"></div>
-            <div class="draft droppable ban" team="ally"></div>
-            <div class="draft droppable ban" team="ally"></div>
-          </div>
-        </div>
-        <div class="col-sm-6 text-center">
-          <h2 class="text-muted">Opponent's Bans</h2>
-          <div>
-            <div class="draft droppable ban" team="enemy"></div>
-            <div class="draft droppable ban" team="enemy"></div>
-            <div class="draft droppable ban" team="enemy"></div>
-            <div class="draft droppable ban" team="enemy"></div>
-            <div class="draft droppable ban" team="enemy"></div>
-          </div>
+    <div id="picks" class="row">
+      <div class="col-sm-6 text-center">
+        <h2 class="text-muted">Radiant</h2>
+        <div>
+          <div class="draft" data-team="radiant" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="radiant" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="radiant" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="radiant" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="radiant" data-toggle="tooltip" data-placement="top"></div>
         </div>
       </div>
-      <div id="picks" class="row">
-        <div class="col-sm-6 text-center">
-          <h2 class="text-muted">Your Team's Draft</h2>
-          <div>
-            <div class="draft droppable pick" team="ally"></div>
-            <div class="draft droppable pick" team="ally"></div>
-            <div class="draft droppable pick" team="ally"></div>
-            <div class="draft droppable pick" team="ally"></div>
-            <div class="draft droppable pick" team="ally"></div>
-          </div>
-        </div>
-        <div class="col-sm-6 text-center">
-          <h2 class="text-muted">Opponent's Draft</h2>
-          <div>
-            <div class="draft droppable pick" team="enemy"></div>
-            <div class="draft droppable pick" team="enemy"></div>
-            <div class="draft droppable pick" team="enemy"></div>
-            <div class="draft droppable pick" team="enemy"></div>
-            <div class="draft droppable pick" team="enemy"></div>
-          </div>
+      <div class="col-sm-6 text-center">
+        <h2 class="text-muted">Dire</h2>
+        <div>
+          <div class="draft" data-team="dire" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="dire" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="dire" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="dire" data-toggle="tooltip" data-placement="top"></div>
+          <div class="draft" data-team="dire" data-toggle="tooltip" data-placement="top"></div>
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-4">
-      <h2 class="text-muted">Suggestions</h2>
+    <div id="suggestions" class="row">
+      <div id="radiant-suggestions" class="col-sm-6">
+        <h2 class="text-muted">Suggestions</h2>
+      </div>
+      <div id="dire-suggestions" class="col-sm-6">
+        <h2 class="text-muted">Suggestions</h2>
+      </div>
     </div>
   </div>
   <div class="footer">

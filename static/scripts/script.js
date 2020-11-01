@@ -9,8 +9,8 @@ function requestHeroes() {
         'https://api.opendota.com/api/heroes',
         {},
         function(heroes) {
+            heroes.sort((a, b) => a.localized_name.localeCompare(b.localized_name));
             heroes.forEach(hero => {
-                var span = document.createElement('span');
                 var div = document.createElement('div');
                 div.classList.add('sprite');
                 div.classList.add('clickable');
@@ -19,12 +19,11 @@ function requestHeroes() {
                 div.setAttribute('data-toggle', 'tooltip');
                 div.setAttribute('data-placement', 'top');
                 div.setAttribute('data-id', hero.id);
-                span.appendChild(div);
-                document.getElementById(hero.primary_attr + '-heroes').appendChild(span);
+                document.getElementById('heroes').appendChild(div);
             });
 
             initializeQuery();
-            initializeDnD();
+            initializeDraft();
             initializeTeams();
         }
     );
@@ -35,110 +34,137 @@ function requestSuggestions() {
         type: 'GET',
         url: 'suggest',
         data: {
-            'team': window.picks['ally'].join(), 
-            'opponent_team': window.picks['enemy'].join(),
-            'bans': window.bans['ally'].concat(window.bans['enemy']).join(),
+            'team': window.picks['radiant'].join(),
+            'opponent_team': window.picks['dire'].join(),
+            'bans': window.bans.join(),
         },
         success: function(response) {
-            console.log(response);
-            console.log('Picks:');
-            console.log(response.picks.map(x => (x[0], x[1], $('[data-id=' + x[1] + ']').attr('title'))));
-            console.log('Bans:');
-            console.log(response.bans.map(x => (x[0], x[1], $('[data-id=' + x[1] + ']').attr('title'))));
+            clearSuggestions();
+            response.picks.forEach(function(element) {
+                let hero_id = element[1];
+                let win_rate = element[0];
+                addSuggestion(hero_id, win_rate, 'radiant');
+            });
+            response.bans.forEach(function(element) {
+                let hero_id = element[1];
+                let win_rate = element[0];
+                addSuggestion(hero_id, 1 - win_rate, 'dire');
+            });
         },
     });
 }
 
 function initializeTeams() {
-    window.picks = {'ally': [], 'enemy': []};
-    window.bans = {'ally': [], 'enemy': []};
+    window.picks = {'radiant': [], 'dire': []};
+    window.bans = [];
 }
 
-function initializeDnD() {
-    $('.sprite').draggable({
-        revert: function(drop) {
-            if(!$(drop).hasClass('droppable') || $(drop).attr('data-id') != $(this).attr('data-id')) {
-                $(this).removeClass('disabled');
-            }
-        },
-        zIndex: 100,
-        helper: 'clone',
-        snap: '.droppable',
-        snapMode: 'inner',
-        opacity: 0.7,
-        start: function(event) {
-            $(this).addClass('disabled');
-        },
-        cancel: '.disabled',
-        stop: function(event) {
-            $(event.toElement).one('click', function(e) { e.stopImmediatePropagation(); });
+function addSuggestion(hero_id, win_rate, team) {
+    let hero_name = $('[data-id=' + hero_id + ']').attr('title');
+    let div = document.createElement('div');
+    let p = document.createElement('p');
+    p.innerText = hero_name + " - " + (win_rate * 100).toFixed(2) + "%";
+    div.classList.add('suggestion');
+    div.append(p);
+    document.getElementById(team + '-suggestions').appendChild(div);
+}
+
+function clearSuggestions() {
+    $('#suggestions .suggestion').remove();
+}
+
+function pick(hero_id, team) {
+    if (window.picks[team].includes(hero_id) || window.picks[team].length >= 5) { // Then unpick it
+        let idx = window.picks[team].findIndex(i => i == hero_id);
+        let draft_slot_obj = $($('.draft[data-team=' + team + ']')[idx]);
+        console.log(draft_slot_obj.classList);
+        draft_slot_obj.removeClass(draft_slot_obj.attr('class'));
+        draft_slot_obj.removeAttr('title');
+        draft_slot_obj.removeAttr('data-id');
+        draft_slot_obj.addClass('draft');
+        window.picks[team].splice(idx, 1);
+        $('#heroes .sprite[data-id=' + hero_id + ']').removeClass('disabled');
+    } else {
+        window.picks[team].push(hero_id);
+        let hero_obj = $('#heroes .sprite[data-id=' + hero_id + ']');
+        let classes = hero_obj.attr('class');
+        hero_obj.addClass('disabled');
+
+        let hero_idx = window.picks[team].length - 1;
+        let draft_slot_obj = $($('.draft[data-team=' + team + ']')[hero_idx]);
+        draft_slot_obj.addClass(classes);
+        draft_slot_obj.attr('title', hero_obj.attr('title'));
+        draft_slot_obj.attr('data-id', hero_id);
+    }
+    clearSelection();
+    requestSuggestions();
+}
+
+function ban(hero_id) {
+    if (window.bans.includes(hero_id)) { // Already banned, unban it
+        let idx = window.bans.findIndex(i => i == hero_id);
+        window.bans.splice(idx, 1);
+        $('#heroes .sprite[data-id=' + hero_id + ']').removeClass('banned');
+    } else {
+        window.bans.push(hero_id);
+        $('#heroes .sprite[data-id=' + hero_id + ']').addClass('banned');
+    }
+    clearSelection();
+    requestSuggestions();
+}
+
+function initializeDraft() {
+    $('#heroes .sprite').click(function() {
+        $('#query').val($(this).attr('title'));
+        updateSelection();
+    });
+    $('#draft .draft').click(function() {
+        if ($(this).attr('data-id') != undefined) {
+            $('#query').val($(this).attr('title'));
+            updateSelection();
         }
     });
-
-    $('.draft').droppable({
-        acept: '.sprite',
-        hoverClass: 'ui-state-highlight',
-        drop: function(event, ui) {
-            var name = ui.draggable.attr('title');
-            ui.draggable.addClass('disabled');
-
-            $(this).addClass(ui.draggable.attr('class'));
-            $(this).attr('data-id', ui.draggable.attr('data-id'));
-            $(this).attr('data-sprite', ui.draggable.attr('data-sprite'));
-            $(this).removeClass('disabled')
-            $(this).droppable('disable');
-
-            console.log(name);
-            if ($(this).hasClass('pick')) {
-                window.picks[$(this).attr('team')].push(ui.draggable.attr('data-id'));
-            } else {
-                window.bans[$(this).attr('team')].push(ui.draggable.attr('data-id'));
-            }
-            
-            requestSuggestions();
+    $('#radiant-pick').click(function() {
+        if ($(this).attr('disabled') == 'disabled' ) {
+            return false;
         }
+        pick(window.current, 'radiant');
     });
-    $('.draft').click(function() {
-        // Remove on click
-        if ($(this).hasClass('sprite')) {
-            var id = $(this).attr('data-id');
-            $('[data-id=' + id + ']').removeClass('disabled');
-            var classes = $(this).attr('class').split(' ');
-            for(var i = 0; i < classes.length; i ++) {
-                if(classes[i].startsWith('sprite')) {
-                    $(this).removeClass(classes[i]);
-                }
-            }
-            $(this).removeAttr('data-id');
-            $(this).droppable('enable');
-
-            if ($(this).hasClass('pick')) {
-                var arr = window.picks[$(this).attr('team')];
-                arr.splice(arr.indexOf(id), 1);
-            } else {
-                var arr = window.bans[$(this).attr('team')];
-                arr.splice(arr.indexOf(id), 1);
-            }
-
-            requestSuggestions();
+    $('#dire-pick').click(function() {
+        if ($(this).attr('disabled') == 'disabled' ) {
+            return false;
         }
+        pick(window.current, 'dire');
+    });
+    $('#ban').click(function() {
+        if ($(this).attr('disabled') == 'disabled' ) {
+            return false;
+        }
+        ban(window.current);
     });
 }
 
 function initializeQuery() {
-    $('#query').on('input', updateSprites);
+    $('#query').on('input', updateSelection);
 
     $('#query').on('keydown', function(e) {
         if (e.which == 9) {
             $('#query').val($('#query-hint').attr('original-value'));
             $('#query-hint').val($('#query-hint').attr('original-value'));
-            updateSprites();
+            updateSelection();
             e.preventDefault();
         }
     });
+
+    updateSelection();
 }
 
-function updateSprites() {
+function clearSelection() {
+    $('#query').val('');
+    updateSelection();
+}
+
+function updateSelection() {
     var query = $('#query').val();
     var lowerQuery = query.toLowerCase();
 
@@ -163,18 +189,36 @@ function updateSprites() {
         }
     });
 
+    $('.unique').removeClass('unique');
+    $('#radiant-pick').removeClass('active');
+    $('#dire-pick').removeClass('active');
+    $('#ban').removeClass('active');
     if (matches.length == 1) {
-      matches[0].parent().addClass('unique');
+        window.current = matches[0].attr('data-id');
+        $('#selector button').removeAttr('disabled');
+        $('.sprite[data-id=' + window.current + ']').addClass('unique');
+        if (window.picks['radiant'].includes(window.current)) {
+            $('#radiant-pick').addClass('active');
+            $('#dire-pick').attr('disabled', 'disabled');
+            $('#ban').attr('disabled', 'disabled');
+        }
+        if (window.picks['dire'].includes(window.current)) {
+            $('#dire-pick').addClass('active');
+            $('#radiant-pick').attr('disabled', 'disabled');
+            $('#ban').attr('disabled', 'disabled');
+        }
+        if (window.bans.includes(window.current)) {
+            $('#ban').addClass('active');
+            $('#radiant-pick').attr('disabled', 'disabled');
+            $('#dire-pick').attr('disabled', 'disabled');
+        }
     } else {
-      clearUnique();
+        window.current = undefined;
+        $('#selector button').attr('disabled', 'disabled');
     }
 
     if (!hintSet) {
         $('#query-hint').val(query);
         $('#query-hint').attr('original-value', query);
     }
-}
-
-function clearUnique() {
-  $('.unique').removeClass('unique');
 }
