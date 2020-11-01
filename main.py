@@ -1,8 +1,29 @@
 import datetime
 
+from util import stats
+from util import suggestions
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__, static_url_path='')
+
+
+@app.route('/suggest', methods=['GET'])
+def suggest():
+    team = [int(i) for i in request.args.get('team', '').split(',') if i]
+    opponent_team = [int(i) for i in request.args.get('opponent_team', '').split(',') if i]
+    bans = [int(i) for i in request.args.get('bans', '').split(',') if i]
+    # team = request.form['team'].split(',')
+    # opponent_team = request.form['opponent_team'].split(',')
+    # bans = request.form['bans'].split(',')
+
+    stats_accumulator = stats.Stats.LoadFromJson('./data/stats')
+    suggestor = suggestions.Suggestor(stats_accumulator)
+    pick_advs = suggestor.SuggestPicks(5, team, opponent_team, bans)
+    ban_advs = suggestor.SuggestBans(5, team, opponent_team, bans)
+    return {
+        'picks': pick_advs,
+        'bans': ban_advs,
+    }
 
 
 @app.route('/')

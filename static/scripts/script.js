@@ -6,21 +6,21 @@ $(document).on('page:load', requestHeroes);
 
 function requestHeroes() {
     $.get(
-        "https://api.opendota.com/api/heroes",
+        'https://api.opendota.com/api/heroes',
         {},
         function(heroes) {
             heroes.forEach(hero => {
-                var span = document.createElement("span");
-                var div = document.createElement("div");
-                div.classList.add("sprite");
-                div.classList.add("clickable");
-                div.classList.add("sprite-miniheroes-" + hero.name.replace("npc_dota_hero_", ""));
-                div.setAttribute("title", hero.localized_name);
-                div.setAttribute("data-toggle", "tooltip");
-                div.setAttribute("data-placement", "top");
-                div.setAttribute("data-id", hero.id);
+                var span = document.createElement('span');
+                var div = document.createElement('div');
+                div.classList.add('sprite');
+                div.classList.add('clickable');
+                div.classList.add('sprite-miniheroes-' + hero.name.replace('npc_dota_hero_', ''));
+                div.setAttribute('title', hero.localized_name);
+                div.setAttribute('data-toggle', 'tooltip');
+                div.setAttribute('data-placement', 'top');
+                div.setAttribute('data-id', hero.id);
                 span.appendChild(div);
-                document.getElementById(hero.primary_attr + "-heroes").appendChild(span);
+                document.getElementById(hero.primary_attr + '-heroes').appendChild(span);
             });
 
             initializeQuery();
@@ -28,6 +28,25 @@ function requestHeroes() {
             initializeTeams();
         }
     );
+}
+
+function requestSuggestions() {
+    $.ajax({
+        type: 'GET',
+        url: 'suggest',
+        data: {
+            'team': window.picks['ally'].join(), 
+            'opponent_team': window.picks['enemy'].join(),
+            'bans': window.bans['ally'].concat(window.bans['enemy']).join(),
+        },
+        success: function(response) {
+            console.log(response);
+            console.log('Picks:');
+            console.log(response.picks.map(x => (x[0], x[1], $('[data-id=' + x[1] + ']').attr('title'))));
+            console.log('Bans:');
+            console.log(response.bans.map(x => (x[0], x[1], $('[data-id=' + x[1] + ']').attr('title'))));
+        },
+    });
 }
 
 function initializeTeams() {
@@ -43,19 +62,16 @@ function initializeDnD() {
             }
         },
         zIndex: 100,
-        helper: "clone",
+        helper: 'clone',
         snap: '.droppable',
         snapMode: 'inner',
         opacity: 0.7,
         start: function(event) {
             $(this).addClass('disabled');
-            // clearUnique();
         },
         cancel: '.disabled',
         stop: function(event) {
             $(event.toElement).one('click', function(e) { e.stopImmediatePropagation(); });
-            // $(this).removeClass('disabled');
-            // $(this).draggable('enable');
         }
     });
 
@@ -78,6 +94,8 @@ function initializeDnD() {
             } else {
                 window.bans[$(this).attr('team')].push(ui.draggable.attr('data-id'));
             }
+            
+            requestSuggestions();
         }
     });
     $('.draft').click(function() {
@@ -85,9 +103,9 @@ function initializeDnD() {
         if ($(this).hasClass('sprite')) {
             var id = $(this).attr('data-id');
             $('[data-id=' + id + ']').removeClass('disabled');
-            var classes = $(this).attr("class").split(" ");
+            var classes = $(this).attr('class').split(' ');
             for(var i = 0; i < classes.length; i ++) {
-                if(classes[i].startsWith("sprite")) {
+                if(classes[i].startsWith('sprite')) {
                     $(this).removeClass(classes[i]);
                 }
             }
@@ -101,6 +119,8 @@ function initializeDnD() {
                 var arr = window.bans[$(this).attr('team')];
                 arr.splice(arr.indexOf(id), 1);
             }
+
+            requestSuggestions();
         }
     });
 }

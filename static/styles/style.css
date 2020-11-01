@@ -52,6 +52,14 @@ body {
     z-index: 1;
 }
 
+.sprite.banned { 
+    filter: url(#ban-filter);
+}
+
+.sprite.picked { 
+    filter: url(#picked-filter);
+}
+
 .unique {
     background-color: #e8e275;
     display: inline-block;

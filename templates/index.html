@@ -10,7 +10,23 @@
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
-<body>
+<body>  
+<svg class="defs-only">
+  <filter id="ban-filter" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+    <feColorMatrix type="matrix" 
+    values="0.3 0.1 0.1 0 0.5 
+            0 0.30 0 0 0.50
+            0 0 0.30 0 0.50
+            1    0 0 1 0"></feColorMatrix>
+  </filter>
+  <filter id="picked-filter" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+    <feColorMatrix type="matrix" 
+    values="0 0 0 0 0.5 
+            0 0 0 0 0.50
+            0 0 0 0 0.50
+            1 0 0 1 0"></feColorMatrix>
+  </filter>
+</svg>
 <div class="container">
   <div class="header">
     <h3 class="text-muted text-center">
